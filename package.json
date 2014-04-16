@@ -12,10 +12,23 @@
   "devDependencies": {
     "domify": "^1.2.2",
     "load-styles": "^1.0.1",
-    "component-test2": "*"
+    "mocha": "^1.18.2",
+    "testling": "^1.6.1"
   },
   "browser": {
     "each": "component-each"
+  },
+  "testling": {
+    "harness": "mocha-bdd",
+    "scripts": [
+      "build/build.js",
+      "test/css.js"
+    ],
+    "browsers": [
+      "ie/8..latest",
+      "chrome/30..latest",
+      "firefox/25..latest"
+    ]
   },
   "license": "MIT",
   "component": {

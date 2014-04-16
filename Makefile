@@ -6,9 +6,9 @@ components: component.json
 	@component install --dev
 
 clean:
-	rm -fr build components template.js
+	rm -fr build components node_modules
 
-test:
-	@./node_modules/.bin/component-test phantom
+test: components build
+	@./node_modules/.bin/testling
 
 .PHONY: clean test
